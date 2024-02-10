@@ -20,7 +20,7 @@ jobs:
           pnpm install
       - name: build
         env:
-          BASE_PATH: '/picosvelte'
+          POCKETBASE_URL: '${{ secrets.PUBLIC_POCKETBASE_URL }}'
 
         run: |
           pnpm run build
