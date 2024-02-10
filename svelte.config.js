@@ -16,7 +16,7 @@ const config = {
 			"@ui": "src/lib/components/ui",
 			"@widgets": "src/lib/widgets",
 			"@main": "src/lib/main",
-			"@icons": "src/lib/Icons"
+			"@icons": "src/lib/Icons",
 		}
 	}
 };
