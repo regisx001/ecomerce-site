@@ -3,7 +3,7 @@
 	import { Input } from '@ui/input';
 	import { Label } from '@ui/label';
 	import { cn } from '$lib/utils';
-	import { Github } from '@icons';
+	import { Github, Spiner } from '@icons';
 	import { pocketbase } from '$lib';
 
 	let className: string | undefined | null = undefined;
@@ -62,9 +62,10 @@
 			</div>
 			<Button disabled={isLoading}>
 				{#if isLoading}
-					Loading
+					<Spiner fill="black" />
+				{:else}
+					Sign In with Email
 				{/if}
-				Sign In with Email
 			</Button>
 		</div>
 	</form>
@@ -85,7 +86,7 @@
 		}}
 	>
 		{#if isLoading}
-			Loading
+			<Spiner />
 		{:else}
 			<div class="mx-2">
 				<Github />
