@@ -3,12 +3,13 @@
 	import { Input } from '@ui/input';
 	import { Label } from '@ui/label';
 	import { cn } from '$lib/utils';
-	import {Github} from "@icons"
+	import { Github } from '@icons';
+	import { pocketbase } from '$lib';
 
 	let className: string | undefined | null = undefined;
 	export { className as class };
-	
-	export let type : "login"|"register"="login"
+
+	export let type: 'login' | 'register' = 'login';
 
 	let isLoading = false;
 	async function onSubmit() {
@@ -17,6 +18,12 @@
 		setTimeout(() => {
 			isLoading = false;
 		}, 3000);
+	}
+	async function loginWithGithub() {
+		isLoading = true;
+		const authData = await pocketbase.collection('users').authWithOAuth2({ provider: 'github' });
+		console.log(authData);
+		isLoading = false;
 	}
 </script>
 
@@ -42,15 +49,15 @@
 					autocorrect="off"
 					disabled={isLoading}
 				/>
-				{#if type !== "login"}
-				<Input
-					id="passwordConfirm"
-					placeholder="Password Confirm"
-					type="password"
-					autocapitalize="none"
-					autocorrect="off"
-					disabled={isLoading}
-				/>
+				{#if type !== 'login'}
+					<Input
+						id="passwordConfirm"
+						placeholder="Password Confirm"
+						type="password"
+						autocapitalize="none"
+						autocorrect="off"
+						disabled={isLoading}
+					/>
 				{/if}
 			</div>
 			<Button disabled={isLoading}>
@@ -69,13 +76,20 @@
 			<span class="bg-background px-2 text-muted-foreground"> Or continue with </span>
 		</div>
 	</div>
-	<Button variant="outline" type="button" disabled={isLoading}>
+	<Button
+		variant="outline"
+		type="button"
+		disabled={isLoading}
+		on:click={() => {
+			loginWithGithub();
+		}}
+	>
 		{#if isLoading}
 			Loading
 		{:else}
-		<div class="mx-2">
-			<Github />
-		</div>
+			<div class="mx-2">
+				<Github />
+			</div>
 		{/if}
 		{' '}
 		GitHub
