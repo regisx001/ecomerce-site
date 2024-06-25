@@ -146,10 +146,10 @@
 	</div>
 
 	<div class="font-jura p-2">
-		<span class="sm:text-3xl text-2xl text-black">{data.collectionInfo.name}.</span>
-		<span class="sm:text-2xl text-xl text-gray-800">{data.collectionInfo.tagline}</span>
+		<span class="sm:text-3xl text-2xl text-black">data.collectionInfo.name.</span>
+		<span class="sm:text-2xl text-xl text-gray-800">data.collectionInfo.tagline</span>
 	</div>
-	{#if data.products.length > 0}
+	{#if data.products}
 		<div class="flex flex-row items-left sm:col-span-4 flex-wrap sm:place-content-start px-1">
 			{#each data.products as product}
 				<ProductCard

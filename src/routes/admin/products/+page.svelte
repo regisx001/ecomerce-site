@@ -12,29 +12,29 @@
 
 	let showAlertSuccessDelete = false;
 
-	const deleteItem = (productId: string, idx: number) => {
-		fetch(`/admin/products?productId=${productId}`, {
-			method: 'DELETE'
-		}).then((res) => {
-			if (res.status === 200) {
-				const copy = data.products;
-				copy.splice(idx, 1);
-				data.products = copy;
-				showAlertSuccessDelete = true;
-				setTimeout(() => {
-					showAlertSuccessDelete = false;
-				}, 3000);
-			} else {
-				alert('something went wrong...');
-			}
-		});
-	};
+	// const deleteItem = (productId: string, idx: number) => {
+	// 	fetch(`/admin/products?productId=${productId}`, {
+	// 		method: 'DELETE'
+	// 	}).then((res) => {
+	// 		if (res.status === 200) {
+	// 			const copy = data.products;
+	// 			copy.splice(idx, 1);
+	// 			data.products = copy;
+	// 			showAlertSuccessDelete = true;
+	// 			setTimeout(() => {
+	// 				showAlertSuccessDelete = false;
+	// 			}, 3000);
+	// 		} else {
+	// 			alert('something went wrong...');
+	// 		}
+	// 	});
+	// };
 </script>
 
 <div class="p-4 flex flex-col justify-between h-full">
 	<Table.Root class="max-h-9/10 overflow-auto">
 		<Table.Body>
-			{#each data.products as product, i}
+			<!-- {#each data.products as product, i}
 				<Table.Row class="flex justify-between items-center">
 					<Table.Cell class="font-bold">{product.name} - {product.id}</Table.Cell>
 
@@ -69,7 +69,7 @@
 						</AlertDialog.Root>
 					</Table.Cell>
 				</Table.Row>
-			{/each}
+			{/each} -->
 		</Table.Body>
 	</Table.Root>
 	<div class="h-1/10 w-full flex items-center flex-row justify-end">
