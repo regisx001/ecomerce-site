@@ -19,7 +19,7 @@
 				</div>
 			</div>
 			<div class="flex justify-end pt-4">
-				<Button type="submit">join</Button>
+				<Button>join</Button>
 			</div>
 		</form>
 	</Card.Content>
