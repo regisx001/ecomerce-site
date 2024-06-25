@@ -60,7 +60,7 @@
 			</svg>
 		</button>
 		<a href="/products">All Pieces</a>
-		{#each data.collections as collection}
+		<!-- {#each data.collections as collection}
 			<div>
 				<a href={'/products?tag=' + collection.collection}>{collection.collection}</a>
 				<div class="text-lg flex flex-col">
@@ -69,7 +69,7 @@
 					{/each}
 				</div>
 			</div>
-		{/each}
+		{/each} -->
 	</div>
 	<div
 		transition:fade
@@ -81,8 +81,8 @@
 			<Alert.Description>Please proceed to the cart to checkout.</Alert.Description>
 		</Alert.Root>
 	</div>
-	<SpecialOffer isSoldOut={data.isSoldOut} remaining={data.numberLeft} />
-	<NavBar user={data.user} pieces={data.pieces} />
+	<!-- <SpecialOffer isSoldOut={data.isSoldOut} remaining={data.numberLeft} /> -->
+	<!-- <NavBar user={data.user} pieces={data.pieces} /> -->
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
 	<span on:mouseenter={handleRemoveMenu} class="grow bg-neutral-100">
 		<slot />

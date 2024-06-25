@@ -42,27 +42,29 @@
 			class="object-cover w-full h-[80vh] hidden sm:flex transition-all ease-in-out duration-300 bg-black"
 		>
 			<!-- CLD IMAGE SWITCH NEEDED -->
-			<CldImage
+			<!-- <CldImage
 				src={'products/kmqvpskg70djyzlv6l0x'}
 				width={1920}
 				height={900}
 				objectFit="cover"
 				alt="home banner"
 				opacity={90}
-			/>
+			/> -->
+			<!-- <div class="h-[1920px] w-[900px] bg-red-400" /> -->
 		</div>
 		<div
 			class={`object-cover w-full h-[80vh] sm:hidden flex transition-all ease-in-out duration-300 bg-black`}
 		>
 			<!-- CLD IMAGE SWITCH NEEDED -->
-			<CldImage
+			<!-- <CldImage
 				src={'products/qz1ekcqehcdqze9ahg5w'}
 				width={700}
 				height={1000}
 				objectFit="cover"
 				alt="home banner"
 				opacity={80}
-			/>
+			/> -->
+			<!-- <div class="h-[1000px] w-[700px] bg-red-400" /> -->
 		</div>
 		<!-- <img
 			class={`object-cover w-full h-[80vh] hidden sm:flex transition-all ease-in-out duration-300`}
@@ -102,10 +104,11 @@
 			then have it sent out.
 		</p>
 	</div>
-	{#each data.collections as collection}
+	<!-- {#each data.collections as collection}
 		<ImageCollection collectionData={collection} />
-	{/each}
-	<!-- <ImageCollection
+	{/each} -->
+
+	<ImageCollection
 		collectionData={{
 			name: 'Planes',
 			tagLine: 'Honor our history',
@@ -146,7 +149,7 @@
 			dark: true,
 			collectionTag: 'Aerospace'
 		}}
-	/> -->
+	/>
 	<!-- ig embedding cant tell if I like or not -->
 	<blockquote
 		class="instagram-media"
