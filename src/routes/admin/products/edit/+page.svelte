@@ -204,7 +204,7 @@
 								alt="Product"
 								class="aspect-square w-full rounded-md object-cover"
 								height="300"
-								src="/images/placeholder.svg"
+								src="Pic/auth.png"
 								width="300"
 							/>
 							<div class="grid grid-cols-3 gap-2">
@@ -213,7 +213,7 @@
 										alt="Product"
 										class="aspect-square w-full rounded-md object-cover"
 										height="84"
-										src="/images/placeholder.svg"
+										src="Pic/auth.png"
 										width="84"
 									/>
 								</button>
@@ -222,7 +222,7 @@
 										alt="Product"
 										class="aspect-square w-full rounded-md object-cover"
 										height="84"
-										src="/images/placeholder.svg"
+										src="Pic/auth.png"
 										width="84"
 									/>
 								</button>
